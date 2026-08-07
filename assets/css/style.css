@@ -2107,3 +2107,45 @@ header#header.header-scrolled .navmenu a:hover,
 header#header.header-scrolled .navmenu a.active {
   color: #FFFFFF !important;
 }
+
+/* =========================================================
+   PERBAIKAN HEADER DI HP SAAT DI-SCROLL (DARK & FULL WIDTH)
+   ========================================================= */
+
+/* 1. Paksa Header di Layar HP Tetap Lebar Penuh (Tidak Mengecil/Membuat Kotak) */
+@media (max-width: 991px) {
+  header#header,
+  header#header.header-scrolled,
+  .header,
+  .header.header-scrolled {
+    background: rgba(12, 12, 14, 0.95) !important; /* Latar Gelap Mewah */
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important; /* Garis Bawah Emas */
+    
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important; /* Menghilangkan sudut melengkung jika ada */
+    padding: 12px 15px !important; /* Ukuran padding rapi di HP */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  /* 2. Memastikan Tombol Menu HP (Garis Tiga / Bar Icon) Berwarna Emas */
+  .mobile-nav-toggle,
+  header#header.header-scrolled .mobile-nav-toggle {
+    color: #D4AF37 !important;
+    font-size: 1.5rem !important;
+  }
+
+  /* 3. Teks Logo Tetap Berwarna Emas di HP */
+  .logo-text-exact span,
+  .brand-title,
+  .brand-subtitle,
+  .text-top-gold,
+  .text-bottom-gold {
+    color: #D4AF37 !important;
+  }
+}
