@@ -1,0 +1,2109 @@
+/**
+* Template Name: RentZ - Luxury Vehicle Booking Bootstrap Landing website
+* Template URL: https://www.templaterise.com/template/rentz-luxury-vehicle-booking-bootstrap-landing-website
+* Updated: January 05 2025 with Bootstrap v5.3.3
+* Author: templaterise.com
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --primary: #9e8c3b;
+  --white: #ffffff;
+  --bg-primary: #9e8c3b;
+  --btn-hover: #cc4528;
+  --text-color-1: #141414;
+  --text-color-2: #575757;
+  --text-color-3: #9e8c3b;
+}
+
+body{
+  background-color: #FBFBFB;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+
+.font-family-montserrat {
+  font-family: Montserrat;
+}
+
+.text-primary {
+  color: var(--text-color-1) !important;
+}
+
+.text-color-2 {
+  color: var(--text-color-2) !important;
+}
+
+.text-color-3 {
+  color: var(--text-color-3) !important;
+}
+
+.font-weight-800 {
+  font-weight: 800;
+}
+
+.font-weight-600 {
+  font-weight: 600;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-400 {
+  font-weight: 400;
+}
+.text-color-1 {
+  color:  var(--text-color-1);
+}
+
+.header-section {
+  padding-top: 80px;
+  width: 100%;
+  position: relative;
+}
+
+
+.header {
+  padding: 20px 0;
+  transition: all 0.5s;
+  z-index: 9999999;
+  height: 5.5rem;
+  background: linear-gradient(to right, #141414 48%, #FBFBFB 48%);
+}
+
+.hero-section {
+  margin-top: 8px;
+  background: linear-gradient(to right, #141414 48%, #FBFBFB 48%);
+  height: 570px;
+}
+
+@media (max-width: 1199px) {
+  .header {
+    background: #141414;
+  }
+
+  .hero-section {
+    margin-top: 8px;
+    background: #141414;
+    height: auto !important;
+    padding-bottom: 1rem;
+  }
+
+}
+
+
+.logo {
+   height: 40px;
+}
+
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+.scrolled .header {
+  background: var(--white) !important;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.login-btn, .register-btn {
+  border: 1px solid var(--bg-primary);
+  border-radius: 8px;
+  padding: 10px 25px !important;
+  display: block;
+  font-weight: 500;
+}
+
+.register-btn {
+  color: #ffffff !important;
+  background-color: var(--bg-primary);
+  margin-left: .8rem;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    margin-left: .8rem;
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--text-color-1);
+    margin: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:last-child a {
+    padding-right: 0;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--primary);
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 1199px) {
+
+  .customer-section, .revenue-card {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    color: var(--white);
+    font-size: 28px;
+    line-height: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+    background-color: var(--white);
+  }
+
+  .navmenu {
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .navmenu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    background-color: var(--white);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--text-color-1);
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--primary);
+  }
+
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    transform: rotate(180deg);
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: var(--primary);
+    position: absolute;
+    font-size: 20px;
+    top: 80px;
+    right: 35px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    background: rgba(33, 37, 41, 0.8);
+    transition: 0.3s;
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    display: block;
+    background: var(--white);
+  }
+
+  .login-btn, .register-btn {
+      margin: .8rem;
+      width: 7.5rem;
+  }
+
+  .scrolled .mobile-nav-toggle {
+    color: var(--text-color-1) !important;
+    background-color: var(--white) !important;
+  }
+
+}
+
+
+
+.mt-6 {
+  margin-top: 6rem;
+}
+
+
+.mt-7 {
+  margin-top: 7rem;
+}
+
+@media (min-width: 992px) {
+  .mt-lg-7 {
+    margin-top: 7rem !important;
+  }
+}
+
+.pt-6 {
+  padding-top: 6rem;
+}
+
+.pt-7 {
+  padding-top: 7rem;
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 576px) { 
+  .header-img {
+    width: 400px;
+  }
+}
+
+@media (min-width: 768px) { 
+  .header-img {
+    width: 500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-img {
+    width: 680px;
+  }
+}
+
+
+.bg-primary {
+  background-color: var(--bg-primary) !important;
+}
+
+
+.btn-hover {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-hover:hover{
+  color: #fff !important;
+  background-color: var(--bg-primary) !important;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+
+
+.text-size-16 {
+  font-size: 1rem;
+}
+
+.text-size-14 {
+  font-size: 14px;
+}
+
+.text-size-46 {
+  font-size: 2.9rem;
+}
+
+.text-size-18 {
+  font-size: 1.1rem;
+}
+
+.text-size-24 {
+  font-size: 1.5rem;
+}
+
+.text-size-20 {
+  font-size: 1.2rem;
+}
+
+.text-size-48 {
+  font-size: 3rem;
+}
+
+.text-size-40 {
+  font-size: 2.5rem;
+}
+
+.text-size-32 {
+  font-size: 2rem;
+}
+
+
+.social-icons {
+  position: absolute;
+  left: 0px;
+  top: 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.social-icons a {
+  color: #9e8c3b;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.hero-img {
+  width: 100%;
+  max-width: 909px;
+  height: auto;
+}
+
+.img-container {
+  position: absolute; 
+  left: -100px;
+}
+
+@media (max-width: 1199px) {
+  .img-container {
+    position: relative !important;  
+    left: 0;
+  }
+}
+
+.hero-content{
+  background: #00000026; 
+  z-index: 99; 
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.custom-underline {
+  position: relative;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+.section-img {
+  max-width: 548px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+
+.form-container {
+   padding: 30px 30px 15px 30px;
+   border: 1px solid #000000;
+}
+
+.book-now-heading {
+   text-align: center;
+   margin-bottom: 40px;
+   position: relative;
+}
+
+.book-now-heading:after {
+   content: '';
+   position: absolute;
+   bottom: -10px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100px;
+   height: 3px;
+   background-color: #9e8c3b;
+}
+
+.form-control, .form-select {
+   padding: 12px;
+}
+
+.book-now-btn {
+   background-color: #9e8c3b;
+   border: none;
+   padding: 15px 30px;
+   font-weight: 500;
+   transition: background-color 0.3s;
+}
+
+.book-now-btn:hover {
+   background-color: #9e8c3b;
+}
+
+.input-group-text {
+   background-color: #fff;
+}
+.book-now-section {
+ background-color: #FFE4C6;
+}
+.-mt-20 {
+ margin-top: -1.2rem;
+}
+
+.form-control:focus, .form-select:focus {
+ outline: none;
+ box-shadow: none;
+ border-color: transparent;
+}
+
+.car-carousel .card {
+  border: 1px solid #C4C4C4;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+ }
+
+.car-carousel .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.car-carousel .card-body {
+  padding-left: 0px !important;
+}
+
+.car-carousel .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.car-specs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.car-specs span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.price-section p {
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+
+/* Owl Carousel Custom Styles */
+
+.car-carousel .owl-nav .owl-prev,
+.car-carousel .owl-nav .owl-next, 
+.testimonial-carousel .owl-nav .owl-prev, 
+.testimonial-carousel .owl-nav .owl-next {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--primary) !important;
+-webkit-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+font-size: 30px !important;
+}
+
+.car-carousel .owl-nav .owl-prev, 
+.testimonial-carousel .owl-nav .owl-prev {
+left: -30px;
+}
+
+.car-carousel .owl-nav .owl-next, 
+.testimonial-carousel .owl-nav .owl-next {
+right: -50px;
+}
+
+.car-carousel .owl-nav .owl-prev:hover, 
+.car-carousel .owl-nav .owl-next:hover,
+.testimonial-carousel .owl-nav .owl-prev:hover, 
+.testimonial-carousel .owl-nav .owl-next:hover {
+  background-color: transparent !important;
+}
+
+.car-carousel .owl-dots {
+  margin-top: 2rem;
+}
+
+.car-carousel .owl-dot span {
+  background: #ddd !important;
+}
+
+.car-carousel .owl-dot.active span {
+  background: #9e8c3b !important;
+}
+
+.services-section {
+  background-color: var(--text-color-1);
+  padding: 4rem 0;
+  /* height: 350px; */
+}
+.service-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.service-icon {
+  color: #9e8c3b;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.service-description {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.section-description {
+  color: #ffffff;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+
+.testimonial-card {
+  padding: 40px 20px;
+  border: 1px solid #C4C4C4;
+  border-radius: .4rem;
+  text-align: center;
+}
+
+.testimonial-card p {
+  font-size: 1.2rem;
+  color: var(--text-color-2);
+  font-weight: 400;
+}
+
+
+.testimonial-card h2 {
+  font-size: 1.8rem;
+  color: var(--text-color-1);
+  font-weight: 500;
+  margin: 20px 0 20px 0;
+}
+
+.img-box {
+  width: 128px !important;
+  height: 128px !important;
+  background-color: #E1EDFB;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.img-box img {
+  border-radius: 50%;
+}
+
+.counter-section {
+  background-color: #FFE4C6;
+  text-align: center;
+}
+.counter-section h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--text-color-1);
+}
+.counter-section p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-color-2);
+}
+
+
+.contact-container {
+  box-shadow: 0px 0px 40px 0px #0000000D;
+  background-color: #fff;
+} 
+
+.contact-container .form-control {
+  border: 1px solid #C4C4C4;
+  background: #FBFBFB;
+  border-radius: .2rem;
+}
+
+.contact-section {
+  background-color: var(--text-color-1);
+}
+
+.footer {
+  background-color: var(--text-color-1);
+}
+.footer-social-icons li a {
+  color: #9e8c3b;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+ 
+}
+.footer-social-icons li {
+  margin-right: .9rem;
+}
+.footer-social-icons li:last-child {
+  margin-right: 0;
+}
+.footer {
+  position: relative;
+  border-top: 1px solid #C4C4C4;
+  padding: 1.5rem 0;
+  display: block;
+}
+
+/* Custom Hero Setup */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  /* Ganti ./assets/images/1.jpg ke foto dashboard mobil pilihan Anda */
+  background: url('../images/1.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(15, 15, 15, 0.95) 75%, rgba(15, 15, 15, 0) 100%);
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+/* Glassmorphism Booking Widget */
+.booking-widget {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(200, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.widget-title {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.custom-input {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid #444 !important;
+  color: #fff !important;
+  font-size: 0.85rem !important;
+}
+
+.custom-input:focus {
+  border-color: #9e8c3b !important;
+  box-shadow: none !important;
+}
+
+/* Stat Badges */
+.stat-badge {
+  border: 1px solid #9e8c3b;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.stat-badge strong {
+  color: #9e8c3b;
+}
+
+/* Utility Font Sizes */
+.text-size-12 { font-size: 0.75rem; }
+.text-size-16 { font-size: 1rem; }
+.text-size-36 { font-size: 2.25rem; }
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .hero-overlay {
+    width: 100%;
+    background: rgba(15, 15, 15, 0.85);
+  }
+}
+
+/* =========================================================
+   STYLE HEADER / NAVBAR PERSIS MOCK-UP
+   ========================================================= */
+.header {
+  background: rgba(15, 15, 15, 0.9) !important;
+  backdrop-filter: blur(10px);
+  padding: 12px 0;
+}
+
+.logo-text-gold {
+  color: #D4AF37;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.navmenu ul li a {
+  color: #D4AF37 !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: opacity 0.3s;
+}
+
+.navmenu ul li a:hover {
+  opacity: 0.8;
+}
+
+/* Tombol Register Emas */
+.btn-register-gold {
+  background: linear-gradient(135deg, #d1cfc7 0%, #B89028 100%) !important;
+  color: #111111 !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  padding: 8px 24px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(184, 144, 40, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.btn-register-gold:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(184, 144, 40, 0.5);
+}
+
+/* =========================================================
+   HEADER & LOGO PERISAI RESPONSIF
+   ========================================================= */
+.header {
+  background: rgba(12, 12, 12, 0.92) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+/* Ukuran Logo di Laptop/Desktop (Lebih Besar & Elegan) */
+.logo-shield-icon {
+  width: 48px;
+  height: 48px;
+  transition: all 0.3s ease;
+}
+
+.shield-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 2px 6px rgba(212, 175, 55, 0.3));
+}
+
+.brand-title {
+  color: #D4AF37;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  transition: all 0.3s ease;
+}
+
+.brand-subtitle {
+  color: #E2C258;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+  margin-top: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Nav Menu */
+.navmenu ul li a {
+  color: #D4AF37 !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 24px;
+  transition: color 0.3s ease;
+}
+
+.navmenu ul li a:hover,
+.navmenu ul li a.active {
+  color: #FFF !important;
+}
+
+/* Tombol Register Emas Gradient */
+.btn-register-gold {
+  background: linear-gradient(135deg, #615f57 0%, #000000 100%) !important;
+  color: #0D0D0D !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  padding: 9px 24px !important;
+  border-radius: 6px !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(180, 138, 29, 0.35);
+  transition: all 0.3s ease !important;
+}
+
+.btn-register-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(180, 138, 29, 0.55);
+}
+
+/* =========================================================
+   MEDIA QUERIES (Penyesuaian Otomatis Ukuran di HP/Tablet)
+   ========================================================= */
+@media (max-width: 768px) {
+  /* Logo Mengecil Otomatis di HP agar Pas di Layar */
+  .logo-shield-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-title {
+    font-size: 0.9rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.75rem;
+  }
+  
+  .header {
+    padding: 8px 0;
+  }
+}
+
+/* =========================================================
+   PRO LOOK: BOOKING WIDGET & HERO CONTENT
+   ========================================================= */
+.text-gold {
+  color: #D4AF37 !important;
+}
+
+.text-gold-highlight {
+  color: #E2C258;
+  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Card */
+.booking-widget-pro {
+  background: rgba(18, 18, 20, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.widget-title {
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.input-label-pro {
+  display: block;
+  color: rgba(212, 175, 55, 0.85);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.input-group-pro {
+  position: relative;
+}
+
+.custom-input-pro {
+  background-color: rgba(8, 8, 10, 0.85) !important;
+  border: 1px solid rgba(247, 246, 244, 0.25) !important;
+  color: #FFFFFF !important;
+  font-size: 0.85rem !important;
+  padding: 10px 14px !important;
+  border-radius: 8px !important;
+  appearance: none;
+}
+
+.custom-input-pro:focus {
+  border-color: #D4AF37 !important;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.25) !important;
+}
+
+.input-icon-right {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #D4AF37;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+/* Tombol Aksi Emas Elegan */
+.btn-gold-action {
+  background: linear-gradient(135deg, #ECC952 0%, #B48A1D 100%) !important;
+  color: #0A0A0A !important;
+  font-weight: 800 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 1px;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(180, 138, 29, 0.35);
+  transition: all 0.3s ease !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-gold-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(180, 138, 29, 0.55);
+  background: linear-gradient(135deg, #F5D76E 0%, #C89B24 100%) !important;
+}
+
+/* Typography & Badges Pro */
+.hero-title-pro {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+.hero-subtitle-pro {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.stat-badge-pro {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: rgba(12, 12, 14, 0.6);
+  border-radius: 50px;
+  padding: 5px 16px;
+  font-size: 0.78rem;
+  color: #FFFFFF;
+}
+
+.stat-badge-pro strong {
+  color: #D4AF37;
+}
+
+/* Benefits Grid */
+.border-top-gold-line {
+  border-top: 1px solid rgba(212, 175, 55, 0.25) !important;
+}
+
+.benefit-icon-wrapper {
+  color: #D4AF37;
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+  transition: transform 0.3s ease;
+}
+
+.benefit-col:hover .benefit-icon-wrapper {
+  transform: translateY(-3px);
+}
+
+.benefit-text {
+  display: block;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+/* Warna Latar Belakang Opsi Dropdown Saat Diklik */
+.custom-input-pro option {
+  background-color: #121214 !important;
+  color: #FFFFFF !important;
+  padding: 10px;
+}
+
+/* =========================================================
+   RESPONSIF HERO SECTION & WIDGET UNTUK LAPTOP / DESKTOP KECIL
+   ========================================================= */
+
+/* Untuk Laptop / Monitor Kecil (Lebar <= 1200px) */
+@media (max-width: 1200px) {
+  .hero-section {
+    min-height: auto !important;
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .hero-overlay {
+    width: 70% !important; /* Melebarkan overlay agar teks tetap jelas */
+  }
+
+  .booking-widget-pro {
+    padding: 16px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hero-title-pro {
+    font-size: 1.65rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .hero-subtitle-pro {
+    font-size: 0.82rem !important;
+  }
+
+  .stat-badge-pro {
+    padding: 4px 10px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .benefit-icon-wrapper {
+    font-size: 1.05rem !important;
+  }
+
+  .benefit-text {
+    font-size: 0.65rem !important;
+  }
+}
+
+/* Untuk Tablet / Layar Sentuh (Lebar <= 991px) */
+@media (max-width: 991px) {
+  .hero-overlay {
+    width: 100% !important;
+    background: rgba(12, 12, 14, 0.88) !important; /* Overlay penuh di tablet & HP */
+  }
+
+  .hero-content {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+}
+
+/* Penyesuaian Fleksibilitas Input Form */
+.booking-widget-pro form .row {
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+.booking-widget-pro form .col-12,
+.booking-widget-pro form .col-sm-6 {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+/* =========================================================
+   STYLE ELEGAN: SHIFT MARGIN & TOGGLE LUXURY
+   ========================================================= */
+
+/* Menggeser widget sedikit ke bawah agar pas & elegan */
+.custom-widget-shift {
+  margin-top: 40px !important;
+}
+
+/* Status Indicator (Pulse Green) */
+.live-status-badge {
+  font-size: 0.7rem;
+  color: #a3e635;
+  background: rgba(163, 230, 53, 0.1);
+  border: 1px solid rgba(163, 230, 53, 0.3);
+  padding: 3px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #a3e635;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #a3e635;
+  animation: pulseAnimation 1.5s infinite;
+}
+
+@keyframes pulseAnimation {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.2); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Custom Toggle Driver/Lepas Kunci */
+.custom-toggle-group {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3px;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.btn-toggle-custom {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  border: none !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-check:checked + .btn-toggle-custom {
+  background: linear-gradient(135deg, #ECC952 0%, #B48A1D 100%) !important;
+  color: #0A0A0A !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(180, 138, 29, 0.3);
+}
+
+/* Responsif Layar Laptop Kecil */
+@media (max-width: 1366px) {
+  .custom-widget-shift {
+    margin-top: 25px !important;
+  }
+}
+
+/* =========================================================
+   STYLE LOGO EXACT (SVG ICON + TEKS DUA BARIS)
+   ========================================================= */
+
+.logo-exact-wrapper {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Ukuran Icon R di Laptop/Desktop (38px x 38px) */
+.logo-r-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.r-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 2px 4px rgba(212, 175, 55, 0.3));
+}
+
+/* Teks Dua Baris */
+.logo-text-exact {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.text-top-gold {
+  color: #D4AF37;
+  font-weight: 700;
+  font-size: 0.95rem; /* Ukuran baris atas */
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.text-bottom-gold {
+  color: #D4AF37;
+  font-weight: 700;
+  font-size: 0.95rem; /* Ukuran baris bawah */
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+/* Navigasi Header */
+.header {
+  background: rgba(12, 12, 12, 0.92) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 12px 0;
+}
+
+.navmenu ul li a {
+  color: #D4AF37 !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 22px;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIF LOGO (Mengecil Otomatis di HP)
+   --------------------------------------------------------- */
+
+/* Laptop Sedang (<= 1200px) */
+@media (max-width: 1200px) {
+  .logo-r-icon {
+    width: 34px;
+    height: 34px;
+  }
+  .text-top-gold,
+  .text-bottom-gold {
+    font-size: 0.88rem;
+  }
+}
+
+/* Tablet (<= 768px) */
+@media (max-width: 768px) {
+  .logo-r-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .text-top-gold,
+  .text-bottom-gold {
+    font-size: 0.8rem;
+  }
+}
+
+/* HP / Mobile (<= 480px) */
+@media (max-width: 480px) {
+  .logo-r-icon {
+    width: 26px; /* Mengecil pas untuk layar HP */
+    height: 26px;
+  }
+  .text-top-gold,
+  .text-bottom-gold {
+    font-size: 0.72rem; /* Teks otomatis proporsional di HP */
+  }
+  .header {
+    padding: 8px 0;
+  }
+}
+
+/* =========================================================
+   STYLE LOGO PERISAI KUNCI TRANSPARAN + TEKS RESPONSIF
+   ========================================================= */
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Ukuran Logo Gambar di Desktop/Laptop */
+.logo-key-img {
+  height: 48px; /* Ukuran pas untuk layar besar */
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* Typography Teks Brand Emas */
+.brand-title {
+  color: #D4AF37;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  transition: all 0.3s ease;
+}
+
+.brand-subtitle {
+  color: #E2C258;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+  margin-top: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIF (Otomatis Mengecil Saat Dibuka di HP)
+   --------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+  .logo-key-img { height: 42px; }
+  .brand-title { font-size: 1rem; }
+  .brand-subtitle { font-size: 0.82rem; }
+}
+
+@media (max-width: 768px) {
+  .logo-key-img { height: 36px; }
+  .brand-title { font-size: 0.9rem; }
+  .brand-subtitle { font-size: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .logo-key-img { height: 30px; } /* Ukuran mungil & rapi di HP */
+  .brand-title { font-size: 0.78rem; letter-spacing: 0.5px; }
+  .brand-subtitle { font-size: 0.65rem; letter-spacing: 1px; }
+}
+
+/* =========================================================
+   FLOATING WHATSAPP CUSTOMER SERVICE (LUXURY CLOUD STYLE)
+   ========================================================= */
+
+/* Wrapper Utama Posisi Fixed Kanan Bawah */
+.wa-float-cloud {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none !important;
+  transition: transform 0.3s ease;
+}
+
+.wa-float-cloud:hover {
+  transform: translateY(-4px);
+}
+
+/* Tooltip Teks Awan (Cloud Badge) */
+.wa-cloud-tooltip {
+  background: rgba(18, 18, 20, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 8px 16px;
+  border-radius: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: floatCloudAnim 3s ease-in-out infinite;
+}
+
+.wa-tooltip-text {
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* Titik Indikator Online (Hijau Glow) */
+.wa-online-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #25D366;
+}
+
+/* Tombol Ikon WhatsApp Berkilau */
+.wa-icon-box {
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4), 
+              0 0 0 2px rgba(212, 175, 55, 0.6);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Animasi Gelombang / Pulse Berdering di Luar Tombol */
+.wa-icon-box::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(212, 175, 55, 0.6);
+  animation: waPulseRing 2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+/* =========================================================
+   ANIMASI KEYFRAMES
+   ========================================================= */
+
+/* Animasi Melayang Awan (Float Up & Down) */
+@keyframes floatCloudAnim {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Animasi Pulse Ring Emas */
+@keyframes waPulseRing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   RESPONSIF UNTUK LAYAR HP
+   ========================================================= */
+@media (max-width: 768px) {
+  .wa-float-cloud {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* Sembunyikan teks awan di layar HP yang terlalu kecil agar tidak menutupi konten */
+  .wa-cloud-tooltip {
+    display: none;
+  }
+  
+  .wa-icon-box {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================================================
+   STYLE ABOUT US SECTION (LUXURY & MODERN)
+   ========================================================= */
+
+.about-section-luxury {
+  background: #0A0A0C;
+  position: relative;
+}
+
+/* Badge Header Subtitle */
+.badge-gold-subtle {
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #D4AF37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.section-title-gold {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.gold-divider-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #ECC952 0%, #B48A1D 100%);
+  border-radius: 2px;
+  margin-top: 12px;
+}
+
+/* Kartu Utama Kaca (Glassmorphism) */
+.about-card-glass {
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about-subtitle-gold {
+  color: #D4AF37;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.about-text-desc {
+  color: #CCCCCC;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+/* Poin Fitur / Checklist */
+.about-feature-item {
+  display: flex;
+  align-items: center;
+  color: #EEEEEE;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Tombol Aksi Emas Kecil */
+.btn-gold-action-sm {
+  background: linear-gradient(135deg, #ECC952 0%, #B48A1D 100%);
+  color: #0A0A0A !important;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(180, 138, 29, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-gold-action-sm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(180, 138, 29, 0.5);
+}
+
+/* Kartu Grid Statistik Pencapaian */
+.stat-card-luxury {
+  background: rgba(18, 18, 22, 0.65);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 14px;
+  transition: all 0.35s ease;
+}
+
+.stat-card-luxury:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.6);
+  background: rgba(25, 25, 32, 0.85);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.stat-icon-wrapper {
+  color: #D4AF37;
+  font-size: 1.5rem;
+}
+
+.stat-number-gold {
+  color: #D4AF37;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.stat-label {
+  color: #AAAAAA;
+  font-size: 0.78rem;
+  font-weight: 500;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIF MOBILE / TABLET
+   --------------------------------------------------------- */
+@media (max-width: 768px) {
+  .section-title-gold {
+    font-size: 1.5rem;
+  }
+  .about-subtitle-gold {
+    font-size: 1.05rem;
+  }
+  .stat-number-gold {
+    font-size: 1.4rem;
+  }
+  .stat-label {
+    font-size: 0.7rem;
+  }
+}
+
+/* =========================================================
+   STYLE FEATURED CARS LUXURY SECTION
+   ========================================================= */
+
+.featured-cars-section {
+  background: #08080A;
+  position: relative;
+}
+
+/* Kartu Mobil Luxury Glassmorphism */
+.car-card-luxury {
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.car-card-luxury:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6),
+              0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+/* Gambar Mobil & Badge Tag */
+.car-img-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.car-card-luxury:hover .car-img {
+  transform: scale(1.06);
+}
+
+.car-tag-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(10, 10, 12, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #D4AF37;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.car-tag-badge.gold-tag {
+  background: linear-gradient(135deg, #ECC952 0%, #B48A1D 100%);
+  color: #0A0A0A;
+  border: none;
+}
+
+/* Title & Spesifikasi Mobil */
+.car-title {
+  color: #FFFFFF;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.car-specs-grid {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-item {
+  color: #BBBBBB;
+  font-size: 0.78rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Harga & Tombol Book Now */
+.price-label {
+  color: #888888;
+  font-size: 0.68rem;
+  display: block;
+}
+
+.price-amount {
+  color: #D4AF37;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.price-amount small {
+  font-size: 0.7rem;
+  color: #AAAAAA;
+  font-weight: 400;
+}
+
+.btn-gold-card {
+  background: linear-gradient(135deg, #ECC952 0%, #B48A1D 100%);
+  color: #0A0A0A !important;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(180, 138, 29, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-gold-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(180, 138, 29, 0.5);
+}
+
+/* ---------------------------------------------------------
+   RESPONSIF MOBILE / TABLET
+   --------------------------------------------------------- */
+@media (max-width: 576px) {
+  .car-img-wrapper {
+    height: 180px;
+  }
+  .car-title {
+    font-size: 1.05rem;
+  }
+  .spec-item {
+    font-size: 0.7rem;
+  }
+  .price-amount {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================================
+   STYLE HOW IT WORKS & FAQ ACCORDION (LUXURY)
+   ========================================================= */
+
+/* Section Backgrounds */
+.how-it-works-section {
+  background: #0A0A0D;
+}
+
+.faq-section {
+  background: #060608;
+}
+
+/* Kartu Langkah Pemesanan */
+.step-card-luxury {
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  position: relative;
+  transition: all 0.35s ease;
+  height: 100%;
+}
+
+.step-card-luxury:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.step-number-badge {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: rgba(212, 175, 55, 0.3);
+}
+
+.step-icon-box {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(236, 201, 82, 0.15) 0%, rgba(180, 138, 29, 0.05) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D4AF37;
+  font-size: 1.4rem;
+}
+
+.step-title {
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.step-desc {
+  color: #AAAAAA;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Style Accordion FAQ Dark & Gold */
+.faq-item-luxury {
+  background: rgba(18, 18, 22, 0.65) !important;
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  border-radius: 12px !important;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.custom-faq-btn {
+  background: transparent !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  box-shadow: none !important;
+  padding: 18px 22px !important;
+}
+
+.custom-faq-btn:not(.collapsed) {
+  color: #D4AF37 !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.custom-faq-btn::after {
+  filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(5deg); /* Mengubah panah menjadi emas */
+}
+
+.faq-body-text {
+  color: #CCCCCC;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  padding: 18px 22px;
+}
+
+/* =========================================================
+   STYLE FOOTER LUXURY & MODERN
+   ========================================================= */
+
+.footer-luxury {
+  background: #040405;
+  color: #CCCCCC;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  position: relative;
+}
+
+.footer-logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.footer-brand-title {
+  color: #D4AF37;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+}
+
+.footer-brand-sub {
+  color: #E2C258;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+}
+
+.footer-desc {
+  color: #AAAAAA;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Social Media Buttons Emas */
+.social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: linear-gradient(135deg, #ECC952 0%, #B48A1D 100%);
+  color: #0A0A0A;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(180, 138, 29, 0.4);
+}
+
+/* Judul Widget Footer */
+.footer-widget-title {
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-widget-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background: #D4AF37;
+}
+
+/* Link Navigasi Footer */
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #AAAAAA;
+  font-size: 0.85rem;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #D4AF37;
+  padding-left: 4px;
+}
+
+/* Detail Informasi Kontak */
+.contact-gold-icon {
+  color: #D4AF37;
+  font-size: 1.1rem;
+}
+
+.footer-contact-info span {
+  font-size: 0.85rem;
+  color: #BBBBBB;
+}
+
+/* Copyright & Policy */
+.copyright-text {
+  color: #888888;
+  font-size: 0.8rem;
+}
+
+.text-policy {
+  color: #888888;
+  font-size: 0.8rem;
+  text-decoration: none !important;
+  transition: color 0.3s ease;
+}
+
+.text-policy:hover {
+  color: #D4AF37;
+}
+
+/* =========================================================
+   OVERRIDE PAKSA HEADER DARK GLASSMORPHISM
+   ========================================================= */
+header#header,
+header#header.header-scrolled,
+body header.fixed-top,
+body header.header-scrolled {
+  background-color: rgba(10, 10, 12, 0.92) !important;
+  background: rgba(10, 10, 12, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3) !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Memastikan teks menu navigasi tidak berubah hitam */
+header#header .navmenu a,
+header#header.header-scrolled .navmenu a {
+  color: #D4AF37 !important;
+}
+
+header#header .navmenu a:hover,
+header#header .navmenu a.active,
+header#header.header-scrolled .navmenu a:hover,
+header#header.header-scrolled .navmenu a.active {
+  color: #FFFFFF !important;
+}
