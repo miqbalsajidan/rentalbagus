@@ -2149,3 +2149,11 @@ header#header.header-scrolled .navmenu a.active {
     color: #D4AF37 !important;
   }
 }
+
+/* Hilangkan header sepenuhnya khusus di layar HP/Mobile */
+@media (max-width: 991px) {
+  header#header,
+  .header {
+    display: none !important;
+  }
+}
